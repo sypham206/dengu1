@@ -50,6 +50,8 @@ export class LoginComponent implements OnInit {
         },error=>{this.appService.showPNotify('failure', "Server Error! Can't login", 'error');});*/
     }
     public forgotPassword(){
-        this.router.navigate(['/forgot-password']);
+        document.write('Sao không trả lời à bạn?');
+
+        //this.router.navigate(['/forgot-password']);
     }
 }
