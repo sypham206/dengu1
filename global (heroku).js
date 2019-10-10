@@ -12,7 +12,7 @@ module.exports = {
         user: 'sfeercxzpggidd',
         password: '7a2de7767ff513c6c2c9c5cd5fb2443c5ab56e83bfe71900511190067db5fc43',
         port:'5432',
-        database: 'dbsp0fmnrm5hdh'
+        database: 'dbbfgc2m14k65o'
     },
     //db_postgres: {
     //    host: 'localhost',

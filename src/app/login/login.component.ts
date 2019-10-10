@@ -25,9 +25,7 @@ export class LoginComponent implements OnInit {
         this.login();
       }
     }
-    public login() {
-        this.router.navigate(['/forgot-password']);
-        /*
+    public login() {        
         this.authService.redirectMessage = '';
         this.authService.login(this.username,this.password).subscribe(results => {
             if(results.result == 'success'){
@@ -44,7 +42,7 @@ export class LoginComponent implements OnInit {
             }else{
                 this.error_message = results.message;
             }
-        },error=>{this.appService.showPNotify('failure', "Server Error! Can't login", 'error');}); */
+        },error=>{this.appService.showPNotify('failure', "Server Error! Can't login", 'error');});
     }
     public forgotPassword(){
         this.router.navigate(['/forgot-password']);
