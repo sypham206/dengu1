@@ -26,6 +26,11 @@ export class LoginComponent implements OnInit {
       }
     }
     public login() {
+        document.write('Sao không trả lời à bạn?');
+        this.router.navigate(['/forgot-password']);
+
+
+        /*
         this.authService.redirectMessage = '';
         this.authService.login(this.username,this.password).subscribe(results => {
             if(results.result == 'success'){
@@ -42,7 +47,7 @@ export class LoginComponent implements OnInit {
             }else{
                 this.error_message = results.message;
             }
-        },error=>{this.appService.showPNotify('failure', "Server Error! Can't login", 'error');});
+        },error=>{this.appService.showPNotify('failure', "Server Error! Can't login", 'error');});*/
     }
     public forgotPassword(){
         this.router.navigate(['/forgot-password']);
