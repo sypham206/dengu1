@@ -26,14 +26,13 @@ export class LoginComponent implements OnInit {
       }
     }
     public login() {
-        document.write('Sao không trả lời à bạn?');
-        this.router.navigate(['/forgot-password']);
-
-
-        /*
+        this.appService.showPNotify('1');
         this.authService.redirectMessage = '';
+        this.appService.showPNotify('2');
         this.authService.login(this.username,this.password).subscribe(results => {
             if(results.result == 'success'){
+                this.appService.showPNotify('3');
+
                 this.authService.token = results.token;
                 this.authService.current_user = results.user;
 
@@ -43,15 +42,16 @@ export class LoginComponent implements OnInit {
                 this.localStorage.set('current_user',results.user);
 
                 //let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/dashboard';
+                this.appService.showPNotify('4');
                 this.router.navigate(['/dashboard']);
             }else{
+                this.appService.showPNotify('5');
+
                 this.error_message = results.message;
             }
-        },error=>{this.appService.showPNotify('failure', "Server Error! Can't login", 'error');});*/
+        },error=>{this.appService.showPNotify('failure', "Server Error! Can't login", 'error');});
     }
     public forgotPassword(){
-        document.write('Sao không trả lời à bạn?');
-
-        //this.router.navigate(['/forgot-password']);
+        this.router.navigate(['/forgot-password']);
     }
 }
