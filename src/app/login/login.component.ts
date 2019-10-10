@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     }
     public login() {
         this.authService.redirectMessage = '';
-        this.appService.showPNotify('failure', " 002 Server Error! Can't login", 'error');
+        //this.appService.showPNotify('failure', " 002 Server Error! Can't login", 'error');
         this.authService.login(this.username,this.password).subscribe(results => {
             if(results.result == 'success'){
                 this.appService.showPNotify('failure', " 003 Server Error! Can't login", 'error');
