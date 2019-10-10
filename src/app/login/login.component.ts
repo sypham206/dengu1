@@ -26,10 +26,12 @@ export class LoginComponent implements OnInit {
       }
     }
     public login() {
-        this.appService.showPNotify('failure', " sp 206 Server Error! Can't login", 'error');
         this.authService.redirectMessage = '';
+        this.appService.showPNotify('failure', " 002 Server Error! Can't login", 'error');
         this.authService.login(this.username,this.password).subscribe(results => {
             if(results.result == 'success'){
+                this.appService.showPNotify('failure', " 003 Server Error! Can't login", 'error');
+
                 this.authService.token = results.token;
                 this.authService.current_user = results.user;
 
@@ -41,9 +43,14 @@ export class LoginComponent implements OnInit {
                 //let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/dashboard';
                 this.router.navigate(['/dashboard']);
             }else{
+                this.appService.showPNotify('failure', " 004 Server Error! Can't login", 'error');
+
                 this.error_message = results.message;
             }
-        },error=>{this.appService.showPNotify('failure', "Server Error! Can't login", 'error');});
+        },error=>{
+            this.appService.showPNotify('failure', " 005 Server Error! Can't login", 'error');
+
+            this.appService.showPNotify('failure', "Server Error! Can't login", 'error');});
     }
     public forgotPassword(){
         this.router.navigate(['/forgot-password']);
