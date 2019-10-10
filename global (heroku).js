@@ -1,13 +1,13 @@
 var fs = require('fs');
 var nodemailer = require('nodemailer');
 module.exports = {
-    dbb: {
+    db: {
         host: 'localhost',
         user: 'root',
         password: '',
         database: 'qldd'
     },
-    db: {
+    db_postgres: {
         host: 'ec2-54-163-230-199.compute-1.amazonaws.com',
         user: 'sfeercxzpggidd',
         password: '7a2de7767ff513c6c2c9c5cd5fb2443c5ab56e83bfe71900511190067db5fc43',
