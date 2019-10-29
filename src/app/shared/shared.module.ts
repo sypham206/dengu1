@@ -46,10 +46,7 @@ import {ScheduleService} from './services/schedule.service';
 export {ScheduleService};
 import {StudentService} from './services/student.service';
 export {StudentService};
-import { ImportModalComponent } from './components/import-modal/import-modal.component';
-export { ImportModalComponent };
-import { ExportModalComponent } from './components/export-modal/export-modal.component';
-export { ExportModalComponent };
+
 import {AbsenceRequestService} from './services/absence-request.service';
 export {AbsenceRequestService};
 import {AuthGuardService} from './services/auth-guard.service';
@@ -68,14 +65,19 @@ import {QuizService} from './services/quiz.service';
 export {QuizService};
 import {ClassesService} from './services/classes.service';
 export {ClassesService};
-import { QuizDisplayComponent } from './components/quiz-display/quiz-display.component';
-export { QuizDisplayComponent };
+
 import {ProgramsService} from './services/programs.service';
 export {ProgramsService};
 import {NotificationService} from './services/notification.service';
 export {NotificationService};
 import {MapService} from './services/map.service';
 export {MapService};
+import { ImportModalComponent } from './components/import-modal/import-modal.component';
+export { ImportModalComponent };
+import { ExportModalComponent } from './components/export-modal/export-modal.component';
+export { ExportModalComponent };
+import { QuizDisplayComponent } from './components/quiz-display/quiz-display.component';
+export { QuizDisplayComponent };
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
