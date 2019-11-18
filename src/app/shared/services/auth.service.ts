@@ -1,6 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable, Operator } from 'rxjs';
+import 'rxjs/add/operator/map';
 import { AppConfig } from '../config'
 import { Router } from '@angular/router';
 
@@ -14,9 +15,9 @@ export class AuthService {
     // store the URL to redirect after logging in
     public redirectUrl: string;
     public redirectMessage: string;
-    public current_user : any;
+    public current_user : any;    
 
-    public tokenExpired(redirectUrl: string){
+    public tokenExpired(redirectUrl: string){        
         this.redirectUrl = redirectUrl;
         this.redirectMessage = 'Your session is expired. Please login again!';
         this.logout();
